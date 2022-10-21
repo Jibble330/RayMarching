@@ -170,7 +170,6 @@ func run() {
     shapes = append(shapes, Shape(r1), Shape(r2), Shape(ci))
 
     for !win.Closed() {
-        
         imd.Clear()
 
         if win.JustPressed(pixelgl.KeyEscape) {
