@@ -200,7 +200,12 @@ func run() {
 
         dif := mouse.Sub(orig)
         r := NewRay(orig, math.Atan2(dif.Y, dif.X))
-        fmt.Println(r.March())
+        hit, dist := r.March()
+        if hit {
+            fmt.Println("Hit! Distance: ", dist)
+        } else {
+            fmt.Println("Miss")
+        }
 
         for _, s := range shapes {
             s.Draw()
